@@ -28,10 +28,15 @@ class ViewController: UIViewController {
 //                      // self.tableView.reloadData()
 //                  }
 //              }
-        Observable.of(1,2,3).subscribe({print($0)})
-        
-        ObservableSequence
-        
+//        Observable.of(1,2,3).subscribe({print($0)})
+//        
+//        ObservableSequence
+        _ = Observable<String>.create({ (obserber) -> Disposable in
+            obserber.onNext("RXSwift 学习")
+            return Disposables.create()
+        }).subscribe({ (text) in
+            print("订阅到：\(text)")
+        })
     }
 
 

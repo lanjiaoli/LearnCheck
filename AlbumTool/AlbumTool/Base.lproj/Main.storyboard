@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nR6-Jg-Has">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--暖宝宝的视频-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlbumTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rZV-Ky-7ZR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="CNM-az-a7y">
+                                    <size key="itemSize" width="84" height="82"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fbW-jv-xs7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JFo-IM-YP2"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rZV-Ky-7ZR" secondAttribute="trailing" id="2ad-al-0gd"/>
+                            <constraint firstItem="rZV-Ky-7ZR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YAv-5w-8iz"/>
+                            <constraint firstItem="rZV-Ky-7ZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pFw-hH-jp8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rZV-Ky-7ZR" secondAttribute="bottom" id="sq2-3O-jSJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="暖宝宝的视频" largeTitleDisplayMode="never" id="ZlO-pU-X0K"/>
+                    <connections>
+                        <outlet property="collectionView" destination="rZV-Ky-7ZR" id="MGX-NM-fTw"/>
+                        <outlet property="flowLayout" destination="CNM-az-a7y" id="NTd-Be-izB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="112.5"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="XV1-oU-bcg">
+            <objects>
+                <viewController storyboardIdentifier="playController" id="VXP-82-UPe" customClass="PlayViewController" customModule="AlbumTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kGO-Af-HuJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vWp-ga-fB4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="wCx-3Q-rOi" customClass="PageScrollFlowLayout" customModule="AlbumTool" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VXP-82-UPe" id="tdU-a3-tod"/>
+                                    <outlet property="delegate" destination="VXP-82-UPe" id="FXF-F1-IJz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vWp-ga-fB4" firstAttribute="top" secondItem="jEg-Ib-IzC" secondAttribute="top" id="RCT-Io-WLz"/>
+                            <constraint firstAttribute="bottom" secondItem="vWp-ga-fB4" secondAttribute="bottom" id="ars-PH-LCM"/>
+                            <constraint firstItem="jEg-Ib-IzC" firstAttribute="trailing" secondItem="vWp-ga-fB4" secondAttribute="trailing" id="h5g-Xt-qfA"/>
+                            <constraint firstItem="vWp-ga-fB4" firstAttribute="leading" secondItem="kGO-Af-HuJ" secondAttribute="leading" id="tUn-P3-Q5y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jEg-Ib-IzC"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="vWp-ga-fB4" id="Ocl-30-Tt4"/>
+                        <outlet property="flowLayout" destination="wCx-3Q-rOi" id="f7O-WH-KuC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKN-Aa-ED4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ARs-49-gHk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nR6-Jg-Has" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abg-da-Fo5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Fr-6t-zvH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMj-j6-UmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
